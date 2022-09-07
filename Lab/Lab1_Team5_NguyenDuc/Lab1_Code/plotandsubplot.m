@@ -1,0 +1,15 @@
+t = -10:0.1:10;
+x0 = t .*exp(-abs(t));
+xe = abs(t) .*exp(-abs(t));
+x = 0.5 * (x0+xe);
+subplot(3,1,1);
+plot(t,x0);grid;
+title('x0 = t .*exp(-abs(t))');
+subplot(3,1,2);
+plot(t,xe); grid;
+title('xe = abs(t) .*exp(-abs(t))');
+subplot(3,1,3);
+plot(t,x);
+title('x = 0.5 * (x0+xe)');
+grid;
+suptitle('NgocNguyen_DaiDuc');
